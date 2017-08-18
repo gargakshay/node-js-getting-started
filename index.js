@@ -1,11 +1,10 @@
 var express = require('express');
-var path = require('path');
 var index = require('./routes/index');
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(path.join(__dirname, 'angular/dist/')));
+app.use(express.static(__dirname + '/angular/dist/'));
 
 // views is directory for all template files
 // app.set('views', __dirname + '/views');
